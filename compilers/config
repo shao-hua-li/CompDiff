@@ -1,0 +1,24 @@
+[
+    {
+        "CC": "/usr/bin/clang",
+        "CXX": "/usr/bin/clang++",
+        "configs": [
+            "-O0",
+            "-O1",
+            "-O2",
+            "-O3",
+            "-Os"
+        ]
+    },
+    {
+        "CC": "/usr/bin/gcc",
+        "CXX": "/usr/bin/g++",
+        "configs": [
+            "-O0",
+            "-O1",
+            "-O2",
+            "-O3",
+            "-Os"
+        ]
+    }
+]
