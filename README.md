@@ -1,7 +1,7 @@
-# ComDiff
-ComDiff is a tool that implements ***compiler-driven differential testing*** on top of AFL.
+# CompDiff
+CompDiff is a tool that implements ***compiler-driven differential testing*** on top of AFL.
 
-## Building ComDiff
+## Building CompDiff
 
 Clone this repository and cd to the root directory, then
 ```shell
