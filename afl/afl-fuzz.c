@@ -5058,10 +5058,11 @@ EXP_ST u8 common_fuzz_stuff(char** argv, u8* out_buf, u32 len) {
     return 0;
   }
 
-  write_to_testcase(out_buf, len);
 
   differential_compilers(argv, exec_tmout, out_buf, len);
 
+  write_to_testcase(out_buf, len);
+  
   fault = run_target(argv, exec_tmout);
 
   if (stop_soon) return 1;
