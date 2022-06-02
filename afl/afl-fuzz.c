@@ -2594,7 +2594,7 @@ static u8 differential_compilers(char** argv, u32 timeout, void* mem, u32 len) {
   write_to_testcase(mem, len);
 
   fault = run_target_compiler(argv, timeout, 0);
-  if (fault != FAULT_TMOUT) all_to = 0;
+  if (fault == FAULT_TMOUT) return FAULT_TMOUT;
 
   lseek(dev_stdout_fd[0], 0, SEEK_SET);
   lseek(dev_stderr_fd[0], 0, SEEK_SET);
@@ -2614,7 +2614,7 @@ static u8 differential_compilers(char** argv, u32 timeout, void* mem, u32 len) {
   for (int idx_com=1; idx_com < NUM_COM; idx_com++) {
     write_to_testcase(mem, len);
     fault = run_target_compiler(argv, timeout, idx_com);
-    if (fault != FAULT_TMOUT) all_to = 0;
+    if (fault == FAULT_TMOUT) return FAULT_TMOUT;
     lseek(dev_stdout_fd[idx_com], 0, SEEK_SET);
     lseek(dev_stderr_fd[idx_com], 0, SEEK_SET);
 
@@ -2634,7 +2634,7 @@ static u8 differential_compilers(char** argv, u32 timeout, void* mem, u32 len) {
     }
   }
 
-  if (all_to) return 0;
+//   if (all_to) return 0;
 
 
   if (keep_as_diff) {
