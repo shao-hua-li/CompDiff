@@ -1,5 +1,5 @@
 # CompDiff
-CompDiff is a tool that implements ***compiler-driven differential testing*** on top of AFL.
+CompDiff is a tool that implements ***compiler-driven differential testing*** on top of AFL++.
 
 ## Building CompDiff
 
