@@ -18,7 +18,7 @@ randomness_patterns = [
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--bin', dest='binary', required=True, help='Binary path')
 parser.add_argument('--args', dest='arguments', required=True, help='Arguments to binary')
-parser.add_argument('-c', dest='num_com', type=int, required=True, help='The number of compiler configurations')
+parser.add_argument('-y', dest='num_com', type=int, required=True, help='The number of compiler configurations')
 parser.add_argument('--out_file', dest='out_file', default='', required=False, help='The output filename if the target is not producing outputs to stdout.')
 parser.add_argument('--threads', dest='threads', default=1, type=int, required=False, help='Threads to use (default=1)')
 parser.add_argument('-i', dest='in_dir', required=True, help='input dir')
