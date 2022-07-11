@@ -3,7 +3,7 @@ CompDiff is a tool that implements ***compiler-driven differential testing*** on
 
 ## Building CompDiff
 
-Clone this repository and cd to the root directory, then run `preinstall.sh` tp install necessary packages.
+Clone this repository and cd to the root directory, then run `preinstall.sh` to install necessary packages.
 
 To build:
 ```shell
@@ -40,7 +40,7 @@ To fuzz `xpdf` with CompDiff, run
 ```
 $ ./aflpp/afl-fuzz -y 10 -i examples/xpdf/seeds -o examples/xpdf/findings -- ./examples/xpdf/bin/pdftotext @@ -
 ```
-`-y` means the number of compiler configurations will be used. All found bug-triggering inputs will be saved to `examples/xpdf/findings/diffs`.
+`-y` means the number of compiler configurations will be used. All found bug-triggering inputs will be saved to `examples/xpdf/findings/default/diffs`.
 Since `pdftotext` emits output to stdout, CompDiff automatically catch them. For those that outputs are written to files, one need to use `-Y` to specify the output file name.
 
 For example, to fuzz `libtiff`, run
