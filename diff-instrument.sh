@@ -10,8 +10,8 @@ COMDIFFDIR=$(dirname $(realpath "$0"))
 # firstly, build fuzz binary
 export compiler_nm=fuzz
 unset DIFF_ID
-export CC=${COMDIFFDIR}/afl/afl-clang-fast
-export CXX=${COMDIFFDIR}/afl/afl-clang-fast++
+export CC=${COMDIFFDIR}/aflpp/afl-clang-fast
+export CXX=${COMDIFFDIR}/aflpp/afl-clang-fast++
 source $1
 
 # secondly, build binaries with different opt flags
