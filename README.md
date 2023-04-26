@@ -1,5 +1,6 @@
 # CompDiff
-CompDiff is a tool that implements ***compiler-driven differential testing*** on top of AFL++.
+
+CompDiff is a tool that backends the research paper [Finding Unstable Code via Compiler-Driven Differential Testing](https://shao-hua-li.github.io/files/2023-ASPLOS-CompDiff.pdf) published in ASPLOS 2023.
 
 ## Building CompDiff
 
